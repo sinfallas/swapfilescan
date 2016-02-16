@@ -1,4 +1,16 @@
-commit 8e0c670de28a9fa209e8d229fae6c73f12cc536f (HEAD, origin/master, origin/HEAD, master)
+commit 48b4c46051d93473c0251e61395a3817697689d7 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Feb 16 11:35:46 2016 -0430
+
+    * se agrega el script de scaneo en el arranque
+
+commit 78d4924049447410d07f167443aad3e82ec2c552
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Feb 15 23:05:44 2016 -0430
+
+    * changelog
+
+commit 8e0c670de28a9fa209e8d229fae6c73f12cc536f
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Feb 15 23:05:17 2016 -0430
 
