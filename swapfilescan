@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+LC_ALL=C
+contar=0
+
+yad --center --text-align=fill --borders=6 --title="Swapfile Scan" --button="Crear archivo swap":0 --button="Activar archivo swap":1 --button="Salir":2 --text="Seleccione la accion que desea realizar"
+
+mode="$?"
+
+case $mode in
+	0)
+		install="simple"
+		;;
+	1)
+		for i in $(find /media/user/ -type f -name "swapfile.swp"); do
+			let contar=$(($contar+1))
+			losetup /dev/loop$contar $i
+			mkswap /dev/loop$contar
+			swapon -p 30 -f /dev/loop$contar
+		done
+		;;
+	2)
+		exit 0
+		;;
+esac
+
+
+dd if=/dev/zero of="$donde"/swapfile.swp bs=1024 count=102400
+	chown root:root "$donde"/swapfile.swp
+	chmod 0600 "$donde"/swapfile.swp
+	mkswap "$donde"/swapfile.swp
+	umount -fl "$donde"
+
+exit 0
