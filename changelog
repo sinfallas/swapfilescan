@@ -1,4 +1,16 @@
-commit f2a2295e3c899c248334a12e3e43d6486091f110 (HEAD, origin/master, origin/HEAD, master)
+commit 76460a6054f8d5760ed45d1737b2d569e1343c65 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 4 18:26:53 2016 -0430
+
+    * se crea el script y se agregan las primeras funciones
+
+commit 91aa0e689535d1d3d9a1c01f2af28420bbc5ffb6
+Author: jose perez <sinfallas@gmail.com>
+Date:   Mon Feb 29 21:33:57 2016 -0430
+
+    * changelog
+
+commit f2a2295e3c899c248334a12e3e43d6486091f110
 Author: jose perez <sinfallas@gmail.com>
 Date:   Mon Feb 29 21:33:44 2016 -0430
 
