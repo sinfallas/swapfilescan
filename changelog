@@ -1,4 +1,16 @@
-commit bfdf4b047c88087bcefecfa70df314750b450c03 (HEAD, origin/master, origin/HEAD, master)
+commit 9ef3c358cc1b8df8150d73b461c68521465d2e3c (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 4 19:15:39 2016 -0430
+
+    * se coloca la funcion para crear el archivo
+
+commit 20fcd682ebee5e5964e9c72ac1d171197f1c0aed
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 4 18:41:56 2016 -0430
+
+    * changelog
+
+commit bfdf4b047c88087bcefecfa70df314750b450c03
 Author: jose perez <sinfallas@gmail.com>
 Date:   Fri Mar 4 18:41:44 2016 -0430
 
