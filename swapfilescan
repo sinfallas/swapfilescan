@@ -10,12 +10,12 @@ mode="$?"
 
 case $mode in
 	0)
-		dispositivo=$(fdisk -l | grep "Disco" | grep -v "loop" | grep -v "zram" | awk '{print $2}' | sed 's/.$//g' | yad --center --no-click --list --title="Seleccione dispositivo" --text="Seleccione el dispositivo donde desea crear el archivo swap." --separator="" --column 'Dispositivo' --height 380 --width 150 --button="ACEPTAR":0)
-		dispositivo2=$(fdisk -l "dispositivo" | grep "/dev/" | grep -v "Disco" | awk '{print $1}' | yad --center --no-click --list --title="Seleccione la particion" --text="Seleccione la particion donde desea crear el archivo swap." --separator="" --column 'Dispositivo' --height 380 --width 150 --button="ACEPTAR":0)
-		dd if=/dev/zero of="$dispositivo2"/swapfile.swp bs=1024 count=102400
-		chown root:root "$dispositivo2"/swapfile.swp
-		chmod 0600 "$dispositivo2"/swapfile.swp
-		mkswap "$dispositivo2"/swapfile.swp
+		$advertencia --text="Seleccione la carpeta donde desea crear el archivo swap."
+		ubicacion=(yad --file-selection --height 380 --width 500)
+		dd if=/dev/zero of="$ubicacion"/swapfile.swp bs=1024 count=102400
+		chown root:root "$ubicacion"/swapfile.swp
+		chmod 0600 "$ubicacion"/swapfile.swp
+		mkswap "$ubicacion"/swapfile.swp
 		$final --text="Finalizado."
 		;;
 
