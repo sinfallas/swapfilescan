@@ -1,4 +1,16 @@
-commit a201c6c76b504d89e2cfc81d38efc4dcbbcabc01 (HEAD, origin/master, origin/HEAD, master)
+commit 7d3a8af5bc0511b4e5adc495e41433b024b1f589 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Mar 5 19:15:51 2016 -0430
+
+    * se agrega el archivo de variables
+
+commit d7310d9ca4f1f3a40357eb56f1e8c2f0d4b86a14
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 4 19:50:49 2016 -0430
+
+    * changelog
+
+commit a201c6c76b504d89e2cfc81d38efc4dcbbcabc01
 Author: jose perez <sinfallas@gmail.com>
 Date:   Fri Mar 4 19:50:33 2016 -0430
 
@@ -40,7 +52,7 @@ Date:   Fri Mar 4 18:41:44 2016 -0430
 
     * zenodo
 
-commit 6137e7904dd236819c4b116f23c23167cc27b18f
+commit 6137e7904dd236819c4b116f23c23167cc27b18f (tag: v0.1)
 Author: jose perez <sinfallas@gmail.com>
 Date:   Fri Mar 4 18:27:18 2016 -0430
 
