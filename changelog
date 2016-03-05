@@ -1,4 +1,16 @@
-commit 6dd07887aa8986f03db7db8e61145c6b7fdb34b2 (HEAD, origin/master, origin/HEAD, master)
+commit a201c6c76b504d89e2cfc81d38efc4dcbbcabc01 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 4 19:50:33 2016 -0430
+
+    * se crea el archivo desktop
+
+commit 6f588cfd45efc0d9b521146d320d2ea29f332d4e
+Author: jose perez <sinfallas@gmail.com>
+Date:   Fri Mar 4 19:44:30 2016 -0430
+
+    * changelog
+
+commit 6dd07887aa8986f03db7db8e61145c6b7fdb34b2
 Author: jose perez <sinfallas@gmail.com>
 Date:   Fri Mar 4 19:44:11 2016 -0430
 
