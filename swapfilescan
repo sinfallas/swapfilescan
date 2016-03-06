@@ -11,8 +11,27 @@ mode="$?"
 case $mode in
 	0)
 		$advertencia --text="Seleccione la carpeta donde desea crear el archivo swap."
-		ubicacion=(yad --file-selection --height 380 --width 500)
-		dd if=/dev/zero of="$ubicacion"/swapfile.swp bs=1024 count=102400
+		ubicacion=$(yad --file-selection --height 380 --width 500)
+		if [[ -z "$ubicacion" ]]; then
+			$errores --button="Ir atras":0 --button="Salir":1 --text="No selecciono nada. Debe seleccionar una carpeta."
+			if [[ $? = 0 ]]; then
+				source /usr/bin/swapfilescan
+			else
+				rm -f /run/$(basename $0).pid
+				exit 0
+			fi
+		fi
+		peso=$(yad --width=400 --center --text-align=fill --borders=6 --title="Swapfile Scan" --text="Introduzca la cantidad en Megabytes que desea asignar al archivo swap" --form --field="cantidad" --button="Aceptar":0 | sed 's/.$//g')
+		if [[ -z "$peso" ]]; then
+			$errores --button="Ir atras":0 --button="Salir":1 --text="No introdujo una cantidad."
+			if [[ $? = 0 ]]; then
+				source /usr/bin/swapfilescan
+			else
+				rm -f /run/$(basename $0).pid
+				exit 0
+			fi
+		fi
+		dd if=/dev/zero of="$ubicacion"/swapfile.swp bs=1M count=$peso
 		chown root:root "$ubicacion"/swapfile.swp
 		chmod 0600 "$ubicacion"/swapfile.swp
 		mkswap "$ubicacion"/swapfile.swp
