@@ -1,4 +1,16 @@
-commit 665d806d9cb794693403ef9242e315437f699ac2 (HEAD, origin/master, origin/HEAD, master)
+commit e89b7090455e3b8501b668d1b38aaa3632383185 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Mar 5 21:23:33 2016 -0430
+
+    * se cambia la forma de trabajo de la funcion crear
+
+commit ccdeb2df721f37f2f792dee31fc19b98359e2342
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Mar 5 19:27:43 2016 -0430
+
+    * changelog
+
+commit 665d806d9cb794693403ef9242e315437f699ac2
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Mar 5 19:27:16 2016 -0430
 
