@@ -1,4 +1,16 @@
-commit 71541ea18b9813a265a8c0fd882f4fa236f19fa5 (HEAD, origin/master, origin/HEAD, master)
+commit 5f102f361692b9015bf1cadcaa0bf5038d299359 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Apr 9 09:52:20 2016 -0430
+
+    * se eliminan archivos duplicados
+
+commit 5169b358d5f331c05fa805176a843325aafc17c0 (tag: v0.2.1)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Tue Apr 5 20:38:12 2016 -0430
+
+    * changelog
+
+commit 71541ea18b9813a265a8c0fd882f4fa236f19fa5
 Author: jose perez <sinfallas@gmail.com>
 Date:   Tue Apr 5 20:38:02 2016 -0430
 
