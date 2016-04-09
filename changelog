@@ -1,4 +1,16 @@
-commit 1dc6651183200b01c832b9e5827afd736126b1fd (HEAD, origin/master, origin/HEAD, master)
+commit a41c399c3369d8f7f8eec15bd28e2446c4dd28fb (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Apr 9 11:25:36 2016 -0430
+
+    * travis
+
+commit 05d74bc86d1b59e0b61a36de60593e4d2d6b1b55
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Apr 9 10:03:22 2016 -0430
+
+    * changelog
+
+commit 1dc6651183200b01c832b9e5827afd736126b1fd
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Apr 9 10:03:05 2016 -0430
 
