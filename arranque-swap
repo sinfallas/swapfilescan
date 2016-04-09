@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-LC_ALL=C
-contar=0
-for i in $(find /media/user/ -type f -name "swapfile.swp"); do
-	let contar=$(($contar+1))
-	losetup /dev/loop$contar $i
-	mkswap /dev/loop$contar
-	swapon -p 30 -f /dev/loop$contar
-done
