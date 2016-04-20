@@ -4,4 +4,4 @@
 [![DOI](https://zenodo.org/badge/4102/xanadu-linux/swapfilescan.svg)](https://zenodo.org/badge/latestdoi/4102/xanadu-linux/swapfilescan)
 [![Build Status](https://travis-ci.org/xanadu-linux/swapfilescan.svg?branch=master)](https://travis-ci.org/xanadu-linux/swapfilescan)
 
-Script to create and activate swapfiles on Debian
+Script para crear y activar archivos swap en Debian
