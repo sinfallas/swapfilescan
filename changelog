@@ -1,10 +1,28 @@
-commit 950dd8df09dfad47d7a3132f9fa2de047ab090f0 (HEAD, origin/master, origin/HEAD, master)
+commit b35cd928bd4b1a3a2f77380606de3862756e6982 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Jul 30 13:14:58 2017 -0400
+
+    *  se agrega variables
+
+commit eeec510f3d31fbb2d748d2ed1ff7392d40b9559c
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Tue Apr 19 20:24:33 2016 -0430
+
+    Update README.md
+
+commit 5d8f1d95e632fe47dbea90bf7e032e440d5773b7
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Apr 17 21:08:07 2016 -0430
+
+    * changelog
+
+commit 950dd8df09dfad47d7a3132f9fa2de047ab090f0
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Apr 17 21:07:57 2016 -0430
 
     * zenodo
 
-commit b395c27c44799e152e898d4478fe79f66f89d27e
+commit b395c27c44799e152e898d4478fe79f66f89d27e (tag: v0.2.2)
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Apr 9 11:25:51 2016 -0430
 
