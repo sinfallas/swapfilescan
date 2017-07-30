@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Name=Swapfile scan
-Comment=Crea y activa archivos swap
-Icon=system
-Exec=gksu '/usr/bin/swapfilescan'
-Terminal=false
-Type=Application
-Categories=GNOME;GTK;System;

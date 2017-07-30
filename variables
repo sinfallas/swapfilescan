@@ -1,0 +1,79 @@
+#!/usr/bin/env bash
+LC_ALL=C
+memoria=$(grep "MemTotal" /proc/meminfo | awk '{print $2}')
+cpu=$(lscpu | grep "MHz" | awk '{print $3}')
+miswap=$(fdisk -l | grep "swap" | awk '{print $1}')
+quien=$(who | cut -d' ' -f1 | sort | uniq)
+update="apt -q update"
+insta="apt -q -y install"
+miyad='yad --skip-taskbar --button=ACEPTAR:0 --fixed --center --text-align=fill --borders=6'
+errores='yad --skip-taskbar --button=ACEPTAR:0 --fixed --center --text-align=fill --borders=6 --timeout=3 --title="ERROR"'
+advertencia='yad --skip-taskbar --button=ACEPTAR:0 --fixed --center --text-align=fill --borders=6 --title="ADVERTENCIA"'
+final='yad --skip-taskbar --button=ACEPTAR:0 --fixed --center --text-align=fill --borders=6 --timeout=3 --title="FINALIZADO"'
+progreso='yad --fixed --progress --pulsate --auto-close --skip-taskbar --center'
+
+function rootyad () {
+	if [[ "$EUID" != "0" ]]; then
+		yad --skip-taskbar --button=ACEPTAR:0 --fixed --center --text-align=fill --borders=6 --timeout=3 --title="ERROR" --text="ERROR: Debes ser root."
+		exit 1
+	fi
+}
+
+function rootcli () {
+	if [[ "$EUID" != "0" ]]; then
+		echo -e "\e[00;31mERROR: DEBES SER ROOT\e[00m"
+		exit 1
+	fi
+}
+
+function live_check () {
+	if [[ -d /lib/live/mount/rootfs ]]; then
+		$errores --text="Este programa no se puede ejecutar en modo live."
+		exit 1
+	fi
+}
+
+function nolive_check () {
+	if ! [[ -d /lib/live/mount/rootfs ]]; then
+		$errores --text="Este programa debe ejecutarse en modo live."
+		exit 1
+	fi
+}
+
+function limpiar_1 () {
+	history -c
+	apt-get clean
+	rm -rf /tmp/*
+	rm -rf /var/tmp/*
+	rm -rf /root/.local/share/Trash/*
+	rm -rf /home/*/.cache/*
+	rm -rf /home/*/.local/share/Trash/*
+	rm -rf /home/*/.mozilla/firefox/*/*Cache*
+	bleachbit -c adobe_reader.cache chromium.cache chromium.current_session chromium.history elinks.history emesene.cache epiphany.cache firefox.url_history flash.cache flash.cookies google_chrome.cache google_chrome.history links2.history opera.cache opera.search_history opera.url_history &> /dev/null
+}
+
+function iptables_clean () {
+	iptables -F
+	iptables -X
+	iptables -Z
+	iptables -t nat -F
+	iptables -t nat -X
+	iptables -t mangle -F
+	iptables -t mangle -X
+	iptables -P INPUT ACCEPT
+	iptables -P FORWARD ACCEPT
+	iptables -P OUTPUT ACCEPT
+}
+
+function optimizacion_1 () {
+	if ! [[ -f /root/.optimizado2 ]]; then
+		if (( $memoria > 4096000 )); then
+			for i in $quien; do
+				echo "tmpfs /home/$i/.cache tmpfs noatime,noexec,nosuid,async,nodev,rw 0 0" >> /etc/fstab
+			done
+		fi
+		chage -M 183 "$quien"
+		adduser "$quien" sambashare
+		touch /root/.optimizado2
+	fi
+}
