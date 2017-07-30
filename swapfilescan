@@ -3,6 +3,7 @@ LC_ALL=C
 trap "rm -f /run/$(basename $0).pid; exit" 0 1 2 3 15
 echo "$BASHPID" > /run/$(basename $0).pid
 source /usr/bin/variables
+rootyad
 
 yad --center --text-align=fill --borders=6 --title="Swapfile Scan" --button="Crear archivo swap":0 --button="Buscar archivos swap":1 --button="Seleccionar la ubicacion del archivo swap":2 --button="Salir":3 --text="Seleccione la accion que desea realizar"
 
